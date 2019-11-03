@@ -12,7 +12,7 @@ const accountTransactionAction = (data: string): ActionModel => ({
 });
 
 const AccountTransactions = (props: any) => {
-  // useDispatch hook is used to dispatch redux actions.
+  // useDispatch hook is used to dispatch redux actions from presentation layer
   const dispatch = useDispatch();
 
   // useSelector hook is used to get data state from redux store.
