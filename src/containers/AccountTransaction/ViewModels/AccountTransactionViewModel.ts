@@ -1,10 +1,6 @@
 
 
-
-
-export const getAccountTransactions = (accountAddress: string) => {
-
+export const filterAccountTransactions = (transactions: any[]) => {
   
       
-
 }

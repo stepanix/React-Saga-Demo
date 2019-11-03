@@ -4,9 +4,10 @@ import {
   GET_TRANSACTIONS_SUCCESS,
   GET_TRANSACTIONS_ERROR
 } from "../Actions/AccountTransactionAction";
+import { AccountModel } from "../../containers/AccountTransaction/Models/AccountModel";
 
 export const initialTransactionState = {
-  data: []
+  transactions: []
 };
 
 export const accountTransactionReducer = (
