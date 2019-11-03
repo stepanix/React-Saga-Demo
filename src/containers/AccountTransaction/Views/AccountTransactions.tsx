@@ -18,9 +18,21 @@ const AccountTransactions = (props: any) => {
   // useSelector hook is used to get data state from redux store.
   const transactions = useSelector((state: any) => state.accountTransactions.transactions);
 
-  // useEffects hook is used for lifecycle management in Functional Components.
+  /**
+   * API calls, changes to DOM and other side effects are done in the component
+   * lifecycle 'componentDidMount' and 'componentDidUpdate'. useEffect Hook is a
+   * combination of these lifecycles.
+   * Please note:* the intention here is to run the dispatch function once, 
+   * we can easily achieve that by adding an empty dependency list.
+   * If there are no dependencies in it, that means it will stay the same all the time, 
+   * and will not call the function again. Without this, dispatch function will 
+   * be called everytime.
+   */
   useEffect(() => {
-    // dispatch GET_TRANSACTIONS action.
+    /**
+     * dispatch GET_TRANSACTIONS action as soon as component is mounted. In a normal
+     * class based component, this would be done in the 'componentDidMount' method.
+     */
     dispatch(accountTransactionAction(props.address));
   }, []);
 
