@@ -4,7 +4,6 @@ import {
   GET_TRANSACTIONS_SUCCESS,
   GET_TRANSACTIONS_ERROR
 } from "../Actions/AccountTransactionAction";
-import { AccountModel } from "../../containers/AccountTransaction/Models/AccountModel";
 
 export const initialTransactionState = {
   transactions: []
@@ -16,11 +15,11 @@ export const accountTransactionReducer = (
 ) => {
   switch (action.type) {
     case GET_TRANSACTIONS:
-      return { ...state, loading: true };
+      return { ...state };
     case GET_TRANSACTIONS_SUCCESS:
-      return { ...state, loading: false, result: action.payload.result };
+      return { ...state, transactions: action.payload.result };
     case GET_TRANSACTIONS_ERROR:
-      return { ...state, loading: false, result: action.payload.result };
+      return { ...state, transactions: action.payload.result };
     default:
       return state;
   }

@@ -6,7 +6,7 @@
 import { call, put, takeEvery } from 'redux-saga/effects';
 import { ActionModel } from '../../shared/Models/ActionModel';
 
-import { getTransactionsSuccess, getTransactionsError, getTransactions, GET_TRANSACTIONS } from '../Actions/AccountTransactionAction';
+import { getTransactionsSuccess, getTransactionsError, GET_TRANSACTIONS } from '../Actions/AccountTransactionAction';
 import { listAccountTransactions } from '../../containers/AccountTransaction/Services/AccountTransactionService';
 
 /**
