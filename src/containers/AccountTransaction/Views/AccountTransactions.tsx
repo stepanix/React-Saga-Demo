@@ -24,6 +24,7 @@ const AccountTransactions = (props: any) => {
     dispatch(accountTransactionAction(props.address));
   }, []);
 
+  // function to render transaction list to be displayed.
   const renderTransactionList = () => {
     const processedTransactionList = processAccountTransactions(transactions, props.address);
 
